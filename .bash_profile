@@ -1,3 +1,26 @@
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export M2_HOME="/usr/local/Cellar/maven/3.5.4"
+export M2="$M2_HOME/bin"
+export MAVEN_OPTS="-Xmx1024m"
+
+export ANDROID_HOME="/Users/$(whoami)/Library/Android/sdk/"
+
+export CHROME="/usr/local/bin/chromedriver"
+export FIREFOX="/usr/local/bin/geckodriver"
+export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME:$JAVA_HOME/bin$FIREFOX:$CHROME:/Users/ivln/Library/Python/3.7/bin:/usr/local/Cellar/maven/3.$
+
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+
+alias check-ports='lsof -nP +c 15 | grep LISTEN'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
