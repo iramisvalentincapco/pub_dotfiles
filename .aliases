@@ -8,6 +8,8 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+alias check-ports='lsof -nP +c 15 | grep LISTEN'
+
 # Shortcuts
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
