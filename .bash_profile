@@ -1,14 +1,17 @@
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export MAVEN="/usr/local/Cellar/maven/3.$"
 export M2_HOME="/usr/local/Cellar/maven/3.5.4"
 export M2="$M2_HOME/bin"
 export MAVEN_OPTS="-Xmx1024m"
 
-export ANDROID_HOME="/Users/$(whoami)/Library/Android/sdk/"
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export ANDROID_HOME="/Users/ivln/Library/Android/sdk"
 
 export CHROME="/usr/local/bin/chromedriver"
 export FIREFOX="/usr/local/bin/geckodriver"
-export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME:$JAVA_HOME/bin$FIREFOX:$CHROME:/Users/ivln/Library/Python/3.7/bin:/usr/local/Cellar/maven/3.$
-
+export PYTHON_THREE="/Users/ivln/Library/Python/3.7/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME:$JAVA_HOME/bin:$PATH"
+export PATH="$FIREFOX:$CHROME:$PYTHON_THREE:$MAVEN:$PATH"
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
@@ -25,7 +28,7 @@ export PATH="$HOME/bin:$PATH";
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.path ~/.bash_prompt ~/.exports ~/.aliases ~/.functions ~/.extra; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
