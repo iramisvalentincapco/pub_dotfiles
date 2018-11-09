@@ -9,9 +9,6 @@ export ANDROID_HOME="/Users/ivln/Library/Android/sdk"
 export CHROME="/usr/local/bin/chromedriver"
 export FIREFOX="/usr/local/bin/geckodriver"
 export PYTHON_THREE="/Users/ivln/Library/Python/3.7/bin"
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
-export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME:$JAVA_HOME/bin:$PATH"
-export PATH="$FIREFOX:$CHROME:$PYTHON_THREE:$MAVEN:$PATH"
 
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
@@ -23,7 +20,10 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+export USER_BIN="$HOME/bin";
+export BIN_PATHS="$USER_BIN:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export ANDROID_JAVA="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME:$JAVA_HOME/bin"
+export PATH="$USER_BIN:$PATH:$ANDROID_JAVA:$PYTHON_THREE:$FIREFOX:$CHROME:$MAVEN"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -48,6 +48,10 @@ shopt -s cdspell;
 for option in autocd globstar; do
 	shopt -s "$option" 2> /dev/null;
 done;
+
+#if [ "${BASH_VERSINFO}" -ge 4 ] && [ -f /usr/local/share/bash-completion/bash_completion ]; then
+#. /usr/local/share/bash-completion/bash_completion
+#fi
 
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
