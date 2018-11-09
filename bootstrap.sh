@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+git config --global user.name "Iramis Valentin"
+git config --global user.email iramis.valentin@capco.com
+
 cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;

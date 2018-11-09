@@ -18,12 +18,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
 # Add `~/bin` to the `$PATH`
 export USER_BIN="$HOME/bin";
 export BIN_PATHS="$USER_BIN:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export ANDROID_JAVA="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME:$JAVA_HOME/bin"
-export PATH="$USER_BIN:$PATH:$ANDROID_JAVA:$PYTHON_THREE:$FIREFOX:$CHROME:$MAVEN"
+PATH="$PATH:$USER_BIN:$ANDROID_JAVA:$PYTHON_THREE:$CHROME:$FIREFOX:$MAVEN:$M2"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
