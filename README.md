@@ -1,4 +1,4 @@
-# Mathias’s dotfiles
+# Iramis’s dotfiles (Based on original https://mths.be/dotfiles)
 
 ![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)
 
