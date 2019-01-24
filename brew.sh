@@ -16,6 +16,10 @@ BREW_PREFIX=$(brew --prefix)
 brew install coreutils
 ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
+# Install pyenv and virtualenvwrapper for python environment isolation/containment
+brew install pyenv
+brew install pyenv-virtualenvwrapper
+
 # Install some other useful utilities like `sponge`.
 brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
