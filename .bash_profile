@@ -22,7 +22,7 @@ export NVM_DIR="$HOME/.nvm"
 export USER_BIN="$HOME/bin";
 export BIN_PATHS="$USER_BIN:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export ANDROID_JAVA="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME:$JAVA_HOME/bin"
-PATH="$PATH:$USER_BIN:$ANDROID_JAVA:$PYTHON_THREE:$CHROME:$FIREFOX:$MAVEN:$M2"
+PATH="/usr/local/bin:$PATH:$USER_BIN:$ANDROID_JAVA:$PYTHON_THREE:$CHROME:$FIREFOX:$MAVEN:$M2"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -73,3 +73,6 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# add poetry to path
+export PATH="$HOME/.poetry/bin:$PATH"
