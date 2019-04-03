@@ -20,6 +20,7 @@ ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 brew install pyenv
 brew install pyenv-virtualenvwrapper
 brew install openssl
+brew install zlib
 # if on mac mojave:
 # sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
 
