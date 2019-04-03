@@ -34,7 +34,7 @@
         ci = commit
 
         # commit added files with message
-        cm = commit -av -m "$1"
+        cm = "!c() { git commit -av -m \"$1\"; }; c"
 
 	# Commit all changes
 	ca = !git add -A && git commit -av
@@ -96,6 +96,9 @@
 			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
 		fi \
 	}; f"
+        
+        # List conflicting files
+	conflicts = diff --name-only --diff-filter=U
 
 [apply]
 

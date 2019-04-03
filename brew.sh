@@ -19,6 +19,9 @@ ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 # Install pyenv and virtualenvwrapper for python environment isolation/containment
 brew install pyenv
 brew install pyenv-virtualenvwrapper
+brew install openssl
+# if on mac mojave:
+# sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
