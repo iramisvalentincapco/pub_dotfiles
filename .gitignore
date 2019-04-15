@@ -13,4 +13,8 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
+*.appx
+*.xap
 *.apk
+*.ipa
+*.app
