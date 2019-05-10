@@ -14,6 +14,10 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
 
+export LEAP_POSTMAN="/Users/ivln/Workspace/PycharmProjects/bku-utils/postman"
+export LEAP_QA_ENV="$LEAP_POSTMAN/BKU-EKS-QA.postman_environment.json"
+export LEAP_QA_COLLECTION="$LEAP_POSTMAN/CreateQAUsers.postman_collection.json"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

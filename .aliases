@@ -17,6 +17,10 @@ alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
 alias g="git"
 
+# Newman
+alias nm="newman"
+alias bku-create-qa-users="nm run CreateQAUsers.postman_collection.json --color on -e BKU-EKS-QA.postman_environment.json --delay-request 1000 --folder Cust396682 -r htmlextra --reporter-htmlextra-darkTheme --reporter-htmlextra-testPaging --reporter-htmlextra-title "Report: Create QA Users" --reporter-htmlextra-logs true"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
